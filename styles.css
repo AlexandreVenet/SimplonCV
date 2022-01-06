@@ -210,12 +210,12 @@ footer
 	flex-direction: column;
 	text-align: center;
 }	
-footer section:first-child
+footer div:first-child
 {
 	padding: 3em 0 3em 0;
 	background-color: var(--color-main);
 }
-footer section:last-child
+footer div:last-child
 {
 	background-color: var(--color-neutral);
 	padding:2em 0 2em 0;
