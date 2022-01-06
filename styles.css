@@ -1,0 +1,265 @@
+/* ------------------------------------ */
+/* vars */
+:root
+{
+	--font-body: "Roboto", sans-serif;
+	--font-title: "Montserrat", sans-serif;
+	--font-fonteawesome: "Font Awesome 5 Free";
+
+	--color-main: indianred;
+	--color-body: rgb(59, 31, 78);
+	--color-light:white;
+	--color-neutral: gainsboro;
+
+	--drop-shadow: drop-shadow(0px 1px 1px rgba(0,0,0,0.3));
+}
+
+/* ------------------------------------ */
+/* Defaults values */
+*
+{
+    margin:0;
+    padding: 0;
+    border: none;
+}
+a, a:link, a:visited, a:hover, a:active 
+{
+	text-decoration: none;
+}
+ul
+{
+    list-style: none;
+}
+/* ------------------------------------ */
+body
+{
+    box-sizing: border-box;
+    min-width: 340px;
+    width: 100%;    
+    background-color: var(--color-body);
+    color:var(--color-light);
+    font-family: var(--font-body);
+    text-align: justify;
+	font-size: 1em;
+	line-height: 1em;
+}
+h1, h2
+{
+    font-family: var(--font-title);
+    line-height: 1.2em;
+    text-transform:uppercase;
+	filter:var(--drop-shadow);
+}
+/* ------------------------------------ */
+/* Fontawesome */
+.fa-solid, .fa-brands
+{
+	/* display: inline-block; */
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-family: var(--font-fonteawesome); 
+	font-size: 1.5em;
+	font-weight: 900; 
+	filter:var(--drop-shadow);
+}
+/* ------------------------------------ */
+/* Header */
+header
+{
+    display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+	align-items:stretch;
+    background-color: var(--color-main);
+    min-height: 100vh;
+}
+
+header div
+{
+	text-align: center;
+	flex-basis: 100%;
+}
+header div:first-child
+{
+ 	flex-grow: 1;
+ 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+header div:last-child
+{
+	padding: 1em 0 1em 0;
+}
+header p
+{
+    font-size: 1.43em;
+    text-transform:uppercase;
+	filter:var(--drop-shadow);
+}
+
+/* ------------------------------------ */
+/* skills */
+.skills
+{
+	background-color: rebeccapurple;
+}
+@media (min-width:600px)
+{
+	.skills
+	{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.skills section
+{
+	padding:5em 1em 5em 1em;
+    flex-basis: 100%;
+	text-align: center;
+}
+
+@media (min-width:600px)
+{
+	.skills section
+	{
+		max-width: 300px;
+	}
+}
+
+.skills section:nth-child(2n)
+{
+    background-color: rgb(91, 45, 136);
+}
+
+.skills ul
+{
+    margin-top:1em;
+	line-height: 2em;
+}
+
+/* ------------------------------------ */
+/* subMain */
+.subMain
+{
+    display: flex;
+	justify-content: center;
+}
+.container
+{
+	display: flex;
+	flex-direction: column;
+	max-width: 900px;
+}
+.subMain section
+{
+	padding:5em 3em 5em 3em;
+}
+.subMain section:first-child
+{
+	border-bottom: 1px dashed var(--color-main);
+}
+
+.subMain h2
+{
+	color: var(--color-main);
+}
+
+.subMain section ul
+{
+    margin-top: 3em;
+}
+.subMain ul li
+{
+  	margin-bottom: 2em;
+}
+.subMain ul li:last-child
+{
+	margin-bottom: 0;
+}
+.subMain ul li p:first-child
+{
+	margin-bottom: 1em;
+	font-family: var(--font-title);
+}
+@media (min-width:600px)
+{
+	.subMain ul li
+	{
+		display: flex;
+		margin-bottom: 2em;
+		justify-content: flex-start;
+	}
+	.subMain ul li p:first-child
+	{
+		flex-basis: 8em;
+		margin-bottom: 0;
+	}
+	.subMain ul li p:last-child
+	{
+		flex-basis: calc(100% - 8em);
+	}
+}
+/* ------------------------------------ */
+/* Footer */
+footer
+{
+    display: flex;
+	flex-direction: column;
+	text-align: center;
+}	
+footer section:first-child
+{
+	padding: 3em 0 3em 0;
+	background-color: var(--color-main);
+}
+footer section:last-child
+{
+	background-color: var(--color-neutral);
+	padding:2em 0 2em 0;
+	font-size: 0.7em;
+	color: rgba(0,0,0,0.5);
+}
+footer a
+{
+	margin:1em;
+	transition: color 0.2s ease-in-out;
+}
+footer a, footer a:visited
+{
+	color: var(--color-light);
+}
+footer a:hover
+{
+	color:rgba(255,255,255,0.5);
+}
+.fa-github, .fa-circle-user, .fa-linkedin
+{
+	content:"\f09b";
+	font-size: 2em;
+} 
+/* ------------------------------------ */
+/* Hire me */
+.hireMe
+{
+	background-color: rgba(255,255,255,0.9);
+	color:black;
+	position:fixed;
+	top:-1.2em;
+	left: -13.5em;
+	width:450px;
+	padding:3em;
+	text-align: center;
+	transform: rotate(-20deg);
+	display: flex;
+	justify-content: center;	
+	display:block;
+	font-family: var(--font-title);
+	text-transform: uppercase;
+
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+}
+/* ------------------------------------ */
